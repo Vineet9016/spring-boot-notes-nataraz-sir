@@ -1,0 +1,53 @@
+april 17
+======================================================
+now we have thre ways to configure the viewresolver  for the application
+
+ all the belo methods ahve been done with respect to the internalresource viewresolver 
+1:  through application properties  file for the internal resource view resolver 
+2: through the usage for the ba annotation method by making the view  resolver class the bean hich would be laucnhed while the application is started 
+3: through  the usage for the configuration class using component  annotation for the confgiuration class  and after this wee hav to make the class as the viewresolver class , in this case we have to register the resolvers we have created for the application 
+
+apart  from this we also have the urlbasedviewresolver  which is the superclass for the internalresourceviewresolver
+
+
+now in this case we ahve the view name as well which is to be passed for the 
+return method for the view resolver , for this registration is no required  
+
+application.properties is only for the internalresourceviewresolver  as the view class name , 
+we wont  be abl to find inside the application.properties  file 
+but setting the view class name is mandatory if we are workling with the urlbasedviewresolver 
+but this view  clas congiguration is not mandatory in case for the internal resource view resolver 
+ if we dont provide the view class name for the resolver for the bean annotation class , then we get the error as "property  view class is required"
+
+when we use the jsp  - > we use internalresourcfe view reslover
+	         tiles - > tiles related  resolver 
+	       x tch  - > x tech related view class 		
+	etc 
+	
+we can cheeck all of them inside the view in spring docs 
+if we ahve to work with the angular or react , we have to use the internal resource view
+resolver, as they are the scripting lannguages, heence we ahve to include them with the 
+jsp or html only 
+if we use the jstlView as the view class name ,  we must add the jstl jar file in the pom.xml file
+whether we use the jstl tag inside the jsp page or not 	
+
+configuring the view  class is not required for the inmternal resource view resolver 
+but for others , it is required
+		
+============================================================
+
+april -18
+
+most of the industry follow only the intrnalrsourceview resolver 
+
+so in this case  we dont have to set view class name  by dfault as the lvn and physical view name is same in this case 
+for making it sprerately, we ahvee to use some other view resolver  such resource Bundleview resolver 
+ resource bundle view resolver  would not pass to the xml view resolver in the resolver chaining  for the application 
+===================================================================
+
+
+
+
+
+
+	
